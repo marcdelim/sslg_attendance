@@ -4,3 +4,8 @@
     padding: 10px;
     text-align: center;
   }
+
+  .imageContainer > img:hover {
+    width: 500px;
+    height: 300px;
+  }

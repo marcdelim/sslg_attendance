@@ -5,8 +5,8 @@
                         <div class="dropdown profile-element">
                             <img alt="image" height="170" width="170" src="<?=$assets_path.'site/img/logo.jpg'; ?>"/>
                             <a href="#">
-                                <span class="block m-t-xs font-bold"><?= $this->session->userdata('profile')['fullname']?></span>
-                                <span class="text-muted text-xs block"><?= $this->session->userdata('user_role')['description']?></span>
+                                <span class="block m-t-xs font-bold">ROSALYN DELIM</span>
+                                <span class="text-muted text-xs block">SSLG ADVISER</span>
                             </a>
                         </div>
                         <div class="logo-element">

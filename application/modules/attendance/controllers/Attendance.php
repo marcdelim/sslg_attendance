@@ -4,7 +4,6 @@ use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class Attendance extends MX_Controller{
 	private $smodule;
-	private $transaction = [];
 	public function __construct()
     {
         parent::__construct();
@@ -35,35 +34,11 @@ class Attendance extends MX_Controller{
         $this->app->use_js(array("source"=>$this->smodule."/sslg_officers","cache"=>false));
         $this->app->use_css(array("source"=>$this->smodule."/attendance","cache"=>false));
         
-        //$aData['sslg_officers'] = $this->sslg_officers_model->list([]);
-        
 		$header['header_data'] = "SNNHS";
 		$this->template->adminHeaderTpl($header);
 		$this->template->adminSideBarTpl();
         $this->load->view('landing_page');
 		$this->template->adminFooterTpl();
-    }
-
-    public function template(){
-        $this->load->model('company_model');
-        $fields = $this->company_model->fields();
-        array_splice($fields,array_search('id',array_column($fields,'Field')),1);
-        array_splice($fields,array_search('created_by',array_column($fields,'Field')),1);
-        array_splice($fields,array_search('date_created',array_column($fields,'Field')),1);
-        array_splice($fields,array_search('updated_by',array_column($fields,'Field')),1);
-        array_splice($fields,array_search('date_updated',array_column($fields,'Field')),1);
-        // array_splice($fields,array_search('archived',array_column($fields,'Field')),1);
-        $fields = array_column($fields,"Field");
-        $filename = "Company Template";
-        $spreadsheet = new Spreadsheet();
-        $sheet = $spreadsheet->getActiveSheet();
-        $sheet->fromArray($fields, NULL ,'A1');
-        header('Content-Type: application/vnd.ms-excel');
-        header('Content-Disposition: attachment;filename="'.$filename.'.xlsx"');
-        header('Cache-Control: max-age=0');
-
-        $writer = new Xlsx($spreadsheet);
-        $writer->save('php://output');
     }
 
     public function export(){

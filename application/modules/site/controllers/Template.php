@@ -37,7 +37,7 @@ class Template extends MX_Controller {
 	/* Admin Templates */
 	
 	public function adminHeaderTpl($header_data=NULL){
-		$this->sessionChecker();
+		//$this->sessionChecker();
 		$header_data['sys_name'] = $this->system_name;
 		$this->app->header($this->smodule.'/layout/default/header',$header_data);
 	}
