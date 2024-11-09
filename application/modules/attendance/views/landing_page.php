@@ -25,10 +25,7 @@
                                             <div class="form-group col-md-12">
                                                 <label><span style="color:red">*</span> <?= strtoupper(str_replace("_", " ", "Name")) ?></label>
                                                 <select class="form-control name" name="sslg_officers_id" id="sslg_officers_id" required>
-                                                    <option value=""> -- Select Name --</option>
-                                                    <?php foreach ($sslg_officers as $key => $val): ?>
-                                                        <option value="<?= $val['id'] ?>"> <?= $val['full_name'] ?> </option>
-                                                    <?php endforeach; ?>
+                                                   
                                                 </select> <br>
                                             </div>
                                             <div class="center">

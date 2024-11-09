@@ -32,13 +32,15 @@ class Attendance extends MX_Controller{
         $this->app->use_js(array("source"=>$this->smodule."/timein","cache"=>false));
         $this->app->use_js(array("source"=>$this->smodule."/view","cache"=>false));
         $this->app->use_js(array("source"=>$this->smodule."/curDateTime","cache"=>false));
+        $this->app->use_js(array("source"=>$this->smodule."/sslg_officers","cache"=>false));
         $this->app->use_css(array("source"=>$this->smodule."/attendance","cache"=>false));
-        $aData['sslg_officers'] = $this->sslg_officers_model->list([]);
+        
+        //$aData['sslg_officers'] = $this->sslg_officers_model->list([]);
         
 		$header['header_data'] = "Company";
 		$this->template->adminHeaderTpl($header);
 		$this->template->adminSideBarTpl();
-        $this->load->view('landing_page', $aData);
+        $this->load->view('landing_page');
 		$this->template->adminFooterTpl();
     }
 
