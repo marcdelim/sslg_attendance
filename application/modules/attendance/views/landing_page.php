@@ -8,76 +8,63 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
+                    <div class="center">
+                        <h1>Supreme Secondary Learner Government - Time Logs</h1>
+                    </div>
                     <div class="row">
-                        <div class="col-md-12">
-                            <p class="demo">
-                                <button disabled="true" class="btn btn-primary" id="btn-import"><i class="fa fa-upload"></i> Import</button>
-                                |
-                                <button disabled="true" class="btn btn-success" id="btn-add"><i class="fa fa-plus"></i> Add</button>
-                                |
-                                <button class="btn btn-warning" id="btn-export"><i class="fa fa-download"></i> Export</button>
-                                |
-                                <!-- <a target="blank" href="<?= base_url('company/export') ?>" class="btn btn-warning"><i class="fa fa-download"></i> Export All</a>
-                                |   -->
-                                <a href="<?= base_url('company/template') ?>" class="btn btn-info"><i class="fa fa-download"></i> Download Template</a>
+                        <div class="col-md-6">
+                            <div class="panel">
+                                <div class="panel-body">
+                                    <div class="current-time">
+                                        <div class="center">
+                                            <h1 id="datetime"></h1>
+                                            <div class="center" id="my_camera"></div>
+                                        </div>
 
-                            </p>
+                                        <form id="time_in_form">
+                                            <div class="form-group col-md-12">
+                                                <label><span style="color:red">*</span> <?= strtoupper(str_replace("_", " ", "Name")) ?></label>
+                                                <select class="form-control name" name="sslg_officers_id" id="sslg_officers_id" required>
+                                                    <option value=""> -- Select Name --</option>
+                                                    <?php foreach ($sslg_officers as $key => $val): ?>
+                                                        <option value="<?= $val['id'] ?>"> <?= $val['full_name'] ?> </option>
+                                                    <?php endforeach; ?>
+                                                </select> <br>
+                                            </div>
+                                            <div class="center">
+                                                <input type="button" value="Time In/Out" class="btn btn-success" onClick="take_snapshot()">
+                                            </div>
+
+                                            <input type="hidden" name="image" class="image-tag">
+                                            <button class="btn btn-danger pull-right" hidden id="submit_btn"></button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>    
                         </div>
                         <div class="col-md-6">
-                            <p class="demo">
+                            <div class="panel">
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <table id="tbl-list" class="table table-striped table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th><?= strtoupper(str_replace("_", " ", "id")) ?></th>
+                                                    <th><?= strtoupper(str_replace("_", " ", "name")) ?></th>
+                                                    <th><?= strtoupper(str_replace("_", " ", "position")) ?></th>
+                                                    <th><?= strtoupper(str_replace("_", " ", "time_in")) ?></th>
+                                                    <th><?= strtoupper(str_replace("_", " ", "time_out")) ?></th>
+                                                    <th><?= strtoupper(str_replace("_", " ", "view")) ?></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
 
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12"> 
-                    <div class="row">
-                    <div class="col-md-6">
-                        <h2>Supreme Secondary Learner Government - Time Logs</h2>
-
-                            <div class="current-time">
-                                <h1 id="datetime"></h1>
-                                <div id="my_camera"></div>
-                                <form id="time_in_form">
-                                <div class="form-group col-md-6">
-                                <label><span style="color:red">*</span> <?= strtoupper(str_replace("_"," ","Name"))?></label>
-                                <select class="form-control name"  name="sslg_officers_id" id="sslg_officers_id" required>
-                                    <option value=""> -- Select Name --</option>
-                                    <?php foreach($sslg_officers as $key=>$val): ?>
-                                        <option value="<?= $val['id'] ?>"> <?=  $val['full_name'] ?> </option>
-                                    <?php endforeach; ?>
-                                </select> <br>
-                            </div>
-                                    <input type="hidden" name="image" class="image-tag">
-                                    <input type=button value="Time In"  class="btn btn-success" onClick="take_snapshot()">
-
-                                    <button class="btn btn-danger pull-right" hidden id="submit_btn"></button>
-                                </form>
-                            </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="panel">
-                            <div class="panel-body">
-                                <div class="table-responsive">
-                                    <table id="tbl-list" class="table table-striped table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th><?= strtoupper(str_replace("_", " ", "id")) ?></th>
-                                                <th><?= strtoupper(str_replace("_", " ", "name")) ?></th>
-                                                <th><?= strtoupper(str_replace("_", " ", "position")) ?></th>
-                                                <th><?= strtoupper(str_replace("_", " ", "time_in")) ?></th>
-                                                <th><?= strtoupper(str_replace("_", " ", "time_out")) ?></th>
-                                                <th><?= strtoupper(str_replace("_", " ", "view")) ?></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-
-                                        </tbody>
-                                    </table>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     </div>
                 </div>
             </div>

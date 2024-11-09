@@ -18,8 +18,6 @@ Webcam.attach( '#my_camera' );
 
 function take_snapshot() {
 
-    alert("time_in");
-
     var submitBtn = $("#submit_btn");
 
     Webcam.snap( function(data_uri) {
