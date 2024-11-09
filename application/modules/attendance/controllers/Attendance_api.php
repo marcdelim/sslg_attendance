@@ -30,7 +30,6 @@ class Attendance_api extends MX_Controller
         );
 
         $exist_data = $this->attendance_model->list($data);
-        //$this->common->vd($this->db->last_query());die();
         if(empty($exist_data)){
             $data = array(
                 "sslg_officers_id" => $time_in_details['sslg_officers_id']
