@@ -2,14 +2,16 @@
     <div class="main-content">
         <div class="content-heading clearfix">
             <div class="heading-left">
-                <h1 class="page-title">Sto. Niño National High School</h1>
+               
             </div>
         </div>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
                     <div class="center">
-                        <h1>Supreme Secondary Learner Government - Time Logs</h1>
+                        <h1>Sto. Niño National High School - Supreme Secondary Learner Government </h1>
+                        <h1>Time Logs</h1>
+
                     </div>
                     <div class="row">
                         <div class="col-md-6">
