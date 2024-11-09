@@ -1,0 +1,1 @@
+INSERT INTO `module_functions` (`id`, `menu_name`, `name`, `description`) VALUES (NULL, 'prescription', 'view', 'View'), (NULL, 'prescription', 'create', 'Create');

@@ -1,0 +1,8 @@
+INSERT INTO `maintenance_value` (`id`, `code`, `maintenance_type_code`, `name`, `description`, `parent_code`, `created_by`, `date_created`, `archived`) VALUES
+(NULL, 'K10', 'SALES_REPORT_SUB_BU', 'K10', 'SUB_BU', NULL, 0, '2022-06-30 12:01:56', NULL),
+(NULL, 'SHS', 'SALES_REPORT_SUB_BU', 'SHS', 'SUB_BU', NULL, 0, '2022-06-30 12:02:30', NULL),
+(NULL, 'ECE', 'SALES_REPORT_SUB_BU', 'ECE', 'SUB_BU', NULL, 0, '2022-06-30 12:02:40', NULL),
+(NULL, 'TMD', 'SALES_REPORT_SUB_BU', 'TMD', 'SUB_BU', NULL, 0, '2022-06-30 12:02:51', NULL),
+(NULL, 'LMD', 'SALES_REPORT_SUB_BU', 'LMD', 'SUB_BU', NULL, 0, '2022-06-30 12:03:02', NULL),
+(NULL, 'DEFAULT', 'SALES_REPORT_PRODUCT_FORMAT', 'DEFAULT', 'PRODUCT FORMAT', NULL, 0, '2022-06-30 14:03:38', NULL),
+(NULL, 'ANNUAL', 'SALES_REPORT_SEMESTER', 'ANNUAL', 'SEMESTER', NULL, 0, '2022-06-30 17:28:42', NULL);

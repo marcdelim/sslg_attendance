@@ -1,0 +1,1 @@
+INSERT INTO `menu` (`id`, `module_name`, `name`, `controller_name`, `description`, `label_display`, `icon`, `url`, `parent`, `order_index`, `level`, `status`) VALUES (NULL, 'maintenance', 'recommended', 'recommended', 'Recommended', 'Recommended', NULL, '/recommended', '5', '1', '2', '0');

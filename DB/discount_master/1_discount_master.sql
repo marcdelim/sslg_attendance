@@ -1,0 +1,23 @@
+CREATE TABLE `discount_master` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `transaction_id` int(6) UNSIGNED ZEROFILL NOT NULL,
+    `lead_id` INT NOT NULL,
+    `macola_code_k10` VARCHAR(100) NOT NULL, 
+    `macola_code_shs` VARCHAR(100) NOT NULL,
+    `macola_code_tmd` VARCHAR(100) NOT NULL,
+    `macola_code_lmd` VARCHAR(100) NOT NULL,
+    `ramco_code` VARCHAR(100) NOT NULL,
+    `school_name` VARCHAR(100) NOT NULL,
+    `slspn_no` VARCHAR(100) NOT NULL,
+    `region` VARCHAR(100) NOT NULL,
+    `sub_bu` VARCHAR(100) NOT NULL,
+    `bussiness_unit` VARCHAR(100) NOT NULL,
+    `product_type` VARCHAR(100) NOT NULL,
+    `discount_rate` DOUBLE NOT NULL,
+    `created_by` int(11) NOT NULL,
+    `date_created` timestamp NOT NULL DEFAULT current_timestamp(),
+    `updated_by` int(11) DEFAULT NULL,
+    `date_updated` datetime DEFAULT NULL,
+    `archived` datetime DEFAULT NULL,
+    PRIMARY KEY(`id`)
+) ENGINE = InnoDB;

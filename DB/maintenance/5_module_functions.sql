@@ -1,0 +1,5 @@
+INSERT INTO `module_functions` (`id`, `menu_name`, `name`, `description`) VALUES (NULL, 'credit_management', 'view', 'View'), (NULL, 'credit_management', 'create', 'Create');
+INSERT INTO `module_functions` (`id`, `menu_name`, `name`, `description`) VALUES (NULL, 'customers', 'view', 'View'), (NULL, 'customers', 'create', 'Create');
+INSERT INTO `module_functions` (`id`, `menu_name`, `name`, `description`) VALUES (NULL, 'discount_master', 'view', 'View'), (NULL, 'discount_master', 'create', 'Create');
+INSERT INTO `module_functions` (`id`, `menu_name`, `name`, `description`) VALUES (NULL, 'sales_report', 'view', 'View'), (NULL, 'sales_report', 'create', 'Create');
+INSERT INTO `module_functions` (`id`, `menu_name`, `name`, `description`) VALUES (NULL, 'sobi_direct_invoice', 'view', 'View'), (NULL, 'sobi_direct_invoice', 'create', 'Create');

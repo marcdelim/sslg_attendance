@@ -1,0 +1,2 @@
+INSERT INTO `maintenance_type` (`code`, `name`, `description`, `created_by`, `date_created`, `archived`) VALUES ('occurrence', 'Occurrence', 'Occurrence', '1', '2022-06-29 15:13:40', NULL);
+INSERT INTO `maintenance_type` (`code`, `name`, `description`, `created_by`, `date_created`, `archived`) VALUES ('occurrence_activation', 'Occurrence Activation', 'Occurrence Activation', '1', '2022-06-29 15:13:40', NULL);

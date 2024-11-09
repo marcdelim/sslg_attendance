@@ -1,0 +1,1 @@
+INSERT INTO `menu` (`id`, `module_name`, `name`, `controller_name`, `description`, `label_display`, `icon`, `url`, `parent`, `order_index`, `level`, `status`) VALUES (NULL, 'maintenance', 'prescription', 'prescription', 'Prescription', 'Prescription', NULL, '/prescription', '5', '1', '2', '0');

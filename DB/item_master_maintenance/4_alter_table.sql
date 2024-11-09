@@ -1,0 +1,1 @@
+ALTER TABLE `item_master_maintenance` CHANGE `short_description` `short_description` VARCHAR(100) NOT NULL;

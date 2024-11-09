@@ -1,0 +1,2 @@
+INSERT INTO `maintenance_type` (`code`, `name`, `description`, `created_by`, `date_created`, `archived`) VALUES
+('item_master_product_classification', 'item_master_product_classification', 'Item Master Product Classification', 1, '2022-06-30 07:14:38', NULL);

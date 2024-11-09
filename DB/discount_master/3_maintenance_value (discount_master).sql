@@ -1,0 +1,7 @@
+INSERT INTO `maintenance_value` (`id`, `code`, `maintenance_type_code`, `name`, `description`, `parent_code`, `created_by`, `date_created`, `archived`) VALUES
+(NULL, 'K10', 'DISCOUNT_MASTER_SUB_BU', 'K10', 'SUB_BU', NULL, 0, '2022-06-28 07:53:04', NULL),
+(NULL, 'SHS', 'DISCOUNT_MASTER_SUB_BU', 'SHS', 'SUB_BU', NULL, 0, '2022-06-28 07:53:41', NULL),
+(NULL, 'ECE', 'DISCOUNT_MASTER_SUB_BU', 'ECE', 'SUB_BU', NULL, 0, '2022-06-28 07:54:01', NULL),
+(NULL, 'TMD', 'DISCOUNT_MASTER_SUB_BU', 'TMD', 'SUB_BU', NULL, 0, '2022-06-28 07:54:47', NULL),
+(NULL, 'LMD', 'DISCOUNT_MASTER_SUB_BU', 'LMD', 'SUB_BU', NULL, 0, '2022-06-28 07:55:08', NULL),
+(NULL, 'DEFAULT', 'DISCOUNT_MASTER_PRODUCT_TYPE', 'DEFAULT', 'PRODUCT TYPE', NULL, 0, '2022-06-30 06:38:42', NULL);
