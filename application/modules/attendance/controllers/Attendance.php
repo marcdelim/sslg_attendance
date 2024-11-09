@@ -37,7 +37,7 @@ class Attendance extends MX_Controller{
         
         //$aData['sslg_officers'] = $this->sslg_officers_model->list([]);
         
-		$header['header_data'] = "Company";
+		$header['header_data'] = "SNNHS";
 		$this->template->adminHeaderTpl($header);
 		$this->template->adminSideBarTpl();
         $this->load->view('landing_page');
