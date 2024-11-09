@@ -24,16 +24,27 @@ class Attendance_api extends MX_Controller
         $time_in_details= [];
         parse_str($data['time_in_details'],$time_in_details);
 
-        //$file_name = $this->save_image($time_in_details['image']);
-
         $data = array(
-            "name" =>  $time_in_details['name'],
-            "position" => $time_in_details['position'],
-            //"file_name_in" => $file_name
+            "check_today" => true,
+            "sslg_officers_id" =>  $time_in_details['sslg_officers_id']
         );
 
-        $last_insert_id = $this->attendance_model->insert_data($data);
-        $this->save_image($time_in_details['image'], $last_insert_id);
+        $exist_data = $this->attendance_model->list($data);
+        //$this->common->vd($this->db->last_query());die();
+        if(empty($exist_data)){
+            $data = array(
+                "sslg_officers_id" => $time_in_details['sslg_officers_id']
+            );
+            $last_insert_id = $this->attendance_model->insert_data($data);
+            $file_name = $last_insert_id."_time_in";
+        }else{
+            $update_data['time_out'] = date('Y-m-d H:i:s');
+            $this->attendance_model->update($update_data,["id"=>$exist_data['id']]);
+            $file_name = $exist_data['id']."_time_out";
+        }
+
+    
+        $this->save_image($time_in_details['image'], $file_name);
         echo json_encode($this->common->apiData("success","success","Successfully saved!"));
     }
 

@@ -39,15 +39,15 @@
                                 <h1 id="datetime"></h1>
                                 <div id="my_camera"></div>
                                 <form id="time_in_form">
-                                    <div class="form-group col-md-12">
-                                        <label><span style="color:red">*</span> <?= strtoupper(str_replace("_"," ","Full Name"))?></label>
-                                        <input type="text" class="form-control" name="name" id="name" required>
-                                    </div>
-                                    <div class="form-group col-md-12">
-                                        <label><span style="color:red">*</span> <?= strtoupper(str_replace("_"," ","Position"))?></label>
-                                        <input type="text" class="form-control" name="position" id="position" required>
-                                    </div>
-
+                                <div class="form-group col-md-6">
+                                <label><span style="color:red">*</span> <?= strtoupper(str_replace("_"," ","Name"))?></label>
+                                <select class="form-control name"  name="sslg_officers_id" id="sslg_officers_id" required>
+                                    <option value=""> -- Select Name --</option>
+                                    <?php foreach($sslg_officers as $key=>$val): ?>
+                                        <option value="<?= $val['id'] ?>"> <?=  $val['full_name'] ?> </option>
+                                    <?php endforeach; ?>
+                                </select> <br>
+                            </div>
                                     <input type="hidden" name="image" class="image-tag">
                                     <input type=button value="Time In"  class="btn btn-success" onClick="take_snapshot()">
 

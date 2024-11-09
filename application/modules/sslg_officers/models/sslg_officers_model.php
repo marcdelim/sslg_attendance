@@ -1,43 +1,19 @@
 <?php
-class Attendance_model extends MY_Model{
+class Sslg_officers_model extends MY_Model{
         public function __construct(){
         parent::__construct();
     }
 
-    
-    public function insert($data){
-        return $this->db->insert_batch('attendance',$data);
-    }
-
-    public function insert_data($data){
-        $this->db->insert('attendance', $data);
-        $insert_id = $this->db->insert_id();
-     
-        return  $insert_id;
-    }
-
-    public function update($data,$condition){
-        return $this->db->update('attendance',$data,$condition);
-    }
-
-    public function fields(){
-        return $this->db->query('SHOW COLUMNS FROM attendance')->result_array();
-    }
-
     public function list($data, $no_limit = false){
         $columns = [
-            "id" => "attendance.id",
-            "sslg_officers_id" => "attendance.sslg_officers_id",
+            "id" => "sslg_officers.id",
             "full_name" => "sslg_officers.full_name",
             "position" => "sslg_officers.position",
-            "time_in" => "attendance.time_in",
-            "time_out" => "attendance.time_out"
             
         ];
         $this->db
             ->select($this->common->arr_value_as_key($columns))
-            ->from('attendance')
-            ->join('sslg_officers', 'sslg_officers.id  =  attendance.sslg_officers_id', 'left')
+            ->from('sslg_officers')
         ;
 
 
@@ -83,10 +59,6 @@ class Attendance_model extends MY_Model{
 
         if(isset($data['id'])){
             $this->db->where($columns['id'],$data['id']);
-            return $this->db->get()->row_array();
-        } if(isset($data['check_today'])){
-            $this->db->where($columns['sslg_officers_id'],$data['sslg_officers_id']);
-            $this->db->like($columns['time_in'],date('Y-m-d'));
             return $this->db->get()->row_array();
         }elseif(isset($data['count_result']) AND $data['count_result'] === true){
             return $this->db->count_all_results();

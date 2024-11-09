@@ -11,6 +11,7 @@ class Attendance extends MX_Controller{
         $this->smodule = strtolower(__CLASS__);
         $this->load->module("core/app");
         $this->load->module("site/template");
+        $this->load->model("sslg_officers/sslg_officers_model");
         
         $this->app->use_css(array("source"=>$this->environment->assets_path."site/css/plugins/dataTables/datatables.min.css","cache"=>false));
 		$this->app->use_js(array("source"=>$this->environment->assets_path."site/js/plugins/dataTables/datatables.min.js","cache"=>false));
@@ -31,17 +32,12 @@ class Attendance extends MX_Controller{
         $this->app->use_js(array("source"=>$this->smodule."/timein","cache"=>false));
         $this->app->use_js(array("source"=>$this->smodule."/view","cache"=>false));
         $this->app->use_js(array("source"=>$this->smodule."/curDateTime","cache"=>false));
-        // $this->app->use_js(array("source"=>$this->smodule."/upload","cache"=>false));
-        // $this->app->use_js(array("source"=>$this->smodule."/delete","cache"=>false));
-        // $this->app->use_js(array("source"=>$this->smodule."/webcam","cache"=>false));
-        // $this->app->use_js(array("source"=>$this->smodule."/webcam_script","cache"=>false));
-      //  $this->app->use_css(array("source"=>$this->smodule."/attendance","cache"=>false));
+        $aData['sslg_officers'] = $this->sslg_officers_model->list([]);
         
 		$header['header_data'] = "Company";
 		$this->template->adminHeaderTpl($header);
 		$this->template->adminSideBarTpl();
-		//$this->load->view('landing_test');
-        $this->load->view('landing_page');
+        $this->load->view('landing_page', $aData);
 		$this->template->adminFooterTpl();
     }
 

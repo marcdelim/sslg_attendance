@@ -48,7 +48,7 @@ var data = {
                 }
             },"columns": [
                 { "data": "id" },
-                { "data": "name" },
+                { "data": "full_name" },
                 { "data": "position" },
                 { "data": "time_in" },
                 { "data": "time_out" },
