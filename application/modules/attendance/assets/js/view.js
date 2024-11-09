@@ -19,7 +19,7 @@ var view = {
                 var formHTML = response;
                 var formbox = bootbox.dialog({
                     message: formHTML,
-                    title: 'Company',
+                    title: 'View',
                     className: "frm-view",
                     size : "xl",
                     buttons: {

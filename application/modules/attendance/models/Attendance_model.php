@@ -40,6 +40,10 @@ class Attendance_model extends MY_Model{
             ->join('sslg_officers', 'sslg_officers.id  =  attendance.sslg_officers_id', 'left')
         ;
 
+        if(isset($data['get_current_day_attendance'])){
+            $this->db->like($columns['time_in'],date('Y-m-d'));
+        }
+       
 
         if(isset($data['filters']) AND !empty($data['filters'])){
             foreach($data['filters'] AS $key=>$val){
@@ -86,7 +90,6 @@ class Attendance_model extends MY_Model{
             return $this->db->get()->row_array();
         } if(isset($data['check_today'])){
             $this->db->where($columns['sslg_officers_id'],$data['sslg_officers_id']);
-            $this->db->like($columns['time_in'],date('Y-m-d'));
             return $this->db->get()->row_array();
         }elseif(isset($data['count_result']) AND $data['count_result'] === true){
             return $this->db->count_all_results();

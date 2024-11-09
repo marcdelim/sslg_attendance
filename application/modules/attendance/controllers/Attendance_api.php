@@ -26,7 +26,8 @@ class Attendance_api extends MX_Controller
 
         $data = array(
             "check_today" => true,
-            "sslg_officers_id" =>  $time_in_details['sslg_officers_id']
+            "sslg_officers_id" =>  $time_in_details['sslg_officers_id'],
+            "get_current_day_attendance" => true,
         );
 
         $exist_data = $this->attendance_model->list($data);
@@ -55,6 +56,7 @@ class Attendance_api extends MX_Controller
 
 	public function list(){
 		$data = $this->input->post();
+        $data['get_current_day_attendance'] = true;
         $res = $this->attendance_model->list($data);
 		$recordsTotal = count($res);
         $data['count_result'] = true;
