@@ -51,7 +51,7 @@ class Template extends MX_Controller {
 		$user_role_id = $this->session->userdata('user_role')['id'];
 		$aData['user_profile']["tut_name"] = $profile['last_name'].", ".$profile['first_name'];
 
-		$menu = $this->site_model->get_menu($user_role_id);
+		$menu = $this->site_model->get_menu(1);
 
 		if($menu){
 			$aData['menu'] = $this->menu_builder($menu);
