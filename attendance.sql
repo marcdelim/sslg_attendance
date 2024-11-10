@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 10, 2024 at 02:46 PM
+-- Generation Time: Nov 10, 2024 at 03:08 PM
 -- Server version: 10.3.15-MariaDB
 -- PHP Version: 7.1.30
 
@@ -183,9 +183,25 @@ CREATE TABLE `sslg_officers` (
 --
 
 INSERT INTO `sslg_officers` (`id`, `full_name`, `position`) VALUES
-(1, 'Marc Delim', 'Owner'),
-(2, 'Rosalyn Delim', 'Adviser'),
-(3, 'Matthew Jaiden Delim', 'Anak');
+(1, 'Jessika Clare L. Caballero', 'President'),
+(2, 'Shan Charlie D. Reyes', 'Vice President\r\n'),
+(3, 'Jana Krisha Mari V. Fajardo', 'Secretary'),
+(4, 'Charlene D. Badiola', 'Treasurer'),
+(5, 'Rachel Anne I. Zamora', 'Auditor'),
+(6, 'Regie B. Fernandez', 'Public Information Officer'),
+(7, 'Urice Marionne S. Samson', 'Protocol Officer'),
+(8, 'Eshia Keightria B. De Guzman', 'Grade 7 Representatives'),
+(9, 'Kyle Allen O. Manalo', 'Grade 7 Representatives'),
+(10, 'Krisha Maireen E. Adorable', 'Grade 8 Representatives'),
+(11, 'Angelica Jhedalyn D. Luneta', 'Grade 8 Representatives'),
+(12, 'Daniel C. Basiga', 'Grade 9 Representatives'),
+(13, 'Yuan Niño Tunay', 'Grade 9 Representatives'),
+(14, 'Jeychelle M. Laurilla', 'Grade 10 Representatives'),
+(15, 'Cyrus Evo DJ Gellido', 'Grade 10 Representatives'),
+(16, 'Niño B. Inocentes', 'Grade 11 Representatives'),
+(17, '', 'Grade 11 Representatives'),
+(18, 'Marvin Amor', 'Grade 12 Representatives'),
+(19, 'John Dave A. Ramirez', 'Grade 12 Representatives');
 
 -- --------------------------------------------------------
 
@@ -454,7 +470,7 @@ ALTER TABLE `role_functions`
 -- AUTO_INCREMENT for table `sslg_officers`
 --
 ALTER TABLE `sslg_officers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `transactions`
