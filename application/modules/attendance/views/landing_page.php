@@ -44,6 +44,19 @@
                         <div class="col-md-6">
                             <div class="panel">
                                 <div class="panel-body">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label>START DATE</label>
+                                            <input type="date" class="form-control" name="start_date" id="start_date" value="<?php echo date('Y-m-d'); ?>" >
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label> END DATE</label>
+                                            <input type="date" class="form-control" name="end_date" id="end_date" value="<?php echo date('Y-m-d'); ?>">
+                                        </div>
+                                        <div class="center">
+                                            <input type="button" id="btn-generate" value="Generate" class="btn btn-success">
+                                        </div>
+                                    </div>
                                     <div class="table-responsive">
                                         <table id="tbl-list" class="table table-striped table-hover">
                                             <thead>

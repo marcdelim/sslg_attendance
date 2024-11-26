@@ -56,7 +56,6 @@ class Attendance_api extends MX_Controller
 
 	public function list(){
 		$data = $this->input->post();
-        $data['get_current_day_attendance'] = true;
         $res = $this->attendance_model->list($data);
 		$recordsTotal = count($res);
         $data['count_result'] = true;
