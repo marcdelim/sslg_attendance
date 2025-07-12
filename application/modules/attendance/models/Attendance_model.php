@@ -85,10 +85,15 @@ class Attendance_model extends MY_Model{
             }
         }
 
+        if(isset($data['start_date']) AND isset($data['end_date'])){
+            $this->db->where("DATE(attendance.time_in) >=",$data['start_date']);
+            $this->db->where("DATE(attendance.time_in) <=",$data['end_date']);
+        }
+
         if(isset($data['id'])){
             $this->db->where($columns['id'],$data['id']);
             return $this->db->get()->row_array();
-        } if(isset($data['check_today'])){
+        }else if(isset($data['check_today'])){
             $this->db->where($columns['sslg_officers_id'],$data['sslg_officers_id']);
             return $this->db->get()->row_array();
         }elseif(isset($data['count_result']) AND $data['count_result'] === true){

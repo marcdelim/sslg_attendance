@@ -1,9 +1,13 @@
 var table;
 $(document).ready(function () {
     data.list();
-    $('#btn-export').on("click", function() {
-        table.button( '.buttons-excel' ).trigger();
+    // $('#btn-export').on("click", function() {
+    //     table.button( '.buttons-excel' ).trigger();
         
+    // });
+
+    $('#btn-generate').on("click", function() {
+        data.list();
     });
 });
 
@@ -34,6 +38,8 @@ var data = {
                 "dataType" : "json",
                 "data" : function(d){
                     d.mod = "attendance|attendance_api|list";
+                    d.start_date = $('#start_date').val();
+                    d.end_date  = $('#end_date').val();
                 },
                 "dataSrc": function ( json ) {
                     var arrData = json.data;
