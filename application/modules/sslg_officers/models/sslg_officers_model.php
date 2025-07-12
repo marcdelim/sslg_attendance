@@ -69,4 +69,20 @@ class Sslg_officers_model extends MY_Model{
             return $this->db->get()->result_array();
         }
     }
+
+    public function update($data,$condition){
+        return $this->db->update('sslg_officers',$data,$condition);
+    }
+
+    public function update_batch($data){
+        return $this->db->update_batch('sslg_officers',$data,'id');
+    }
+
+    public function delete($data){
+        return $this->db->delete('sslg_officers',$data);
+    }
+    
+    public function insert($data){
+        return $this->db->insert_batch('sslg_officers',$data);
+    }
 }
